@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <nav class="nav">
+  <router-link to="/covid"><p class="option" >Covid-19</p></router-link>
+  <router-link to="/"> <p class="option" >Home</p></router-link>
+</nav>
     <router-view />
   </div>
 </template>
@@ -15,6 +15,14 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.nav{
+  position: absolute;
+  right: 10px;
+  top:400px;
+  width: 200px;
+  height: 120px;
+  transform: rotate(90deg);
 }
 
 #nav {
@@ -28,5 +36,9 @@
       color: #42b983;
     }
   }
+}
+.option{
+  color:white;
+  padding: 10px;
 }
 </style>
